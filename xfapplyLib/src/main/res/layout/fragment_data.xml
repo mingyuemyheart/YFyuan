@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eaeaea"
+    android:orientation="vertical" >
+
+	<RelativeLayout
+        android:id="@+id/rl_download_hint"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/btn_list_item_bg"
+		android:visibility="gone"
+        android:clickable="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="点击后可获取最新的离线数据包！"
+            android:textColor="@color/red_btn_color_normal"
+            android:textSize="16sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#dadada" />
+    </RelativeLayout>
+
+	<HorizontalScrollView
+		android:id="@+id/sv_download"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		android:visibility="gone"
+		android:scrollbars="none">
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:orientation="horizontal">
+			<RelativeLayout
+				android:id="@+id/rl_download"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@drawable/btn_list_item_bg">
+				<TextView
+					android:id="@+id/tv_item"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_alignParentLeft="true"
+					android:layout_marginLeft="10dp"
+					android:layout_marginRight="5dp"
+					android:layout_centerVertical="true"
+					android:gravity="center_vertical"
+					android:text="离线数据包"
+					android:textColor="#e16531"
+					android:textSize="16sp"/>
+
+				<RelativeLayout
+					android:id="@+id/re_item_operation"
+					android:layout_width="84dp"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:background="@drawable/btn_list_item_bg"
+					android:layout_centerVertical="true" >
+					<TextView
+						android:id="@+id/tv_item_operation_per"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_centerVertical="true"
+						android:layout_toLeftOf="@+id/re_operation"
+						android:ellipsize="end"
+						android:singleLine="true"
+						android:text="0%"
+						android:textColor="#6D6D6D"
+						android:textSize="14sp" />
+					<RelativeLayout
+						android:id="@+id/re_operation"
+						android:layout_width="48dp"
+						android:layout_height="match_parent"
+						android:layout_centerVertical="true"
+						android:layout_alignParentRight="true"
+						android:background="@drawable/btn_list_item_bg"
+						android:clickable="true" >
+						<ImageView
+							android:id="@+id/iv_item_operation"
+							android:layout_width="24dp"
+							android:layout_height="24dp"
+							android:layout_centerInParent="true"
+							android:background="@drawable/icon_download"/>
+					</RelativeLayout>
+				</RelativeLayout>
+
+				<ProgressBar
+					android:id="@+id/pb_progressbar"
+					style="@style/StyleProgressBarMini"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/tv_item"
+					android:layout_toLeftOf="@id/re_item_operation"
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="5dp"
+					android:layout_centerVertical="true"
+					android:background="@drawable/shape_progressbar_bg"
+					android:max="100"
+					android:progress="0" />
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="0.1dp"
+					android:layout_alignParentBottom="true"
+					android:background="#dadada" />
+			</RelativeLayout>
+			<RelativeLayout
+				android:id="@+id/re_stop"
+				android:layout_width="48dp"
+				android:layout_height="match_parent"
+				android:background="@drawable/btn_list_item_bg"
+				android:clickable="true" >
+				<ImageView
+					android:id="@+id/iv_item_stop"
+					android:layout_width="24dp"
+					android:layout_height="24dp"
+					android:layout_centerInParent="true"
+					android:background="@drawable/icon_download_stop"/>
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="0.1dp"
+					android:layout_alignParentBottom="true"
+					android:background="#dadada" />
+			</RelativeLayout>
+		</LinearLayout>
+	</HorizontalScrollView>
+    
+    <RelativeLayout
+        android:id="@+id/rl_result"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+    	android:background="@drawable/btn_list_item_bg">
+		<TextView
+			android:id="@+id/tv_cont"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_marginLeft="10dp"
+			android:gravity="center_vertical"
+			android:maxWidth="240dp"
+			android:ellipsize="start"
+			android:singleLine="true"
+			android:text="查询条件"
+			android:textColor="#212121"
+			android:textSize="16sp"  />
+        <TextView
+            android:id="@+id/tv_result"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_toRightOf="@id/tv_cont"
+			android:gravity="center_vertical"
+	        android:layout_marginLeft="5dp"
+            android:maxLines="1"
+            android:text="结果"
+            android:textColor="#0074C7"
+	         android:textSize="16sp"/>
+
+		<RelativeLayout
+			android:id="@+id/re_select"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:clickable="true"
+			android:background="@drawable/btn_list_item_bg" >
+			<TextView
+				android:id="@+id/tv_select"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:text="队站筛选"
+				android:textColor="#ff9800"
+				android:textSize="14sp" />
+		</RelativeLayout>
+    </RelativeLayout>
+
+    <View
+	    android:layout_width="match_parent"
+	    android:layout_height="0.1dp"
+	    android:background="#dadada"/>
+    
+    <com.moft.xfapply.widget.XListView
+        android:cacheColorHint="#00000000"
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:divider="@null" />
+</LinearLayout>

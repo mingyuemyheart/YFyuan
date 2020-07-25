@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="#f5f5f5"
+        android:padding="2dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="图层"
+            android:textColor="#353535"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/re_bdlk_option"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:id="@+id/iv_bdlk_option_open"
+                android:layout_width="40dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="2dp"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:src="@drawable/btn_switch_on_normal"
+                android:visibility="visible" />
+            <ImageView
+                android:id="@+id/iv_bdlk_option_close"
+                android:layout_width="40dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="2dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/btn_switch_off_normal"
+                android:clickable="true"
+                android:visibility="invisible" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/iv_bdlk_option_open"
+                android:layout_centerVertical="true"
+                android:text="路况"
+                android:textColor="#6699cc"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/re_bdlk_option">
+            <ImageView
+                android:id="@+id/iv_mark_option_open"
+                android:layout_width="40dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="2dp"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:src="@drawable/btn_switch_on_normal"
+                android:visibility="visible" />
+            <ImageView
+                android:id="@+id/iv_mark_option_close"
+                android:layout_width="40dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="2dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/btn_switch_off_normal"
+                android:clickable="true"
+                android:visibility="invisible" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/iv_mark_option_open"
+                android:text="标注"
+                android:textColor="#6699cc"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        <RelativeLayout
+            android:id="@+id/rl_satelite"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:clickable="true"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/iv_satelite"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/main_map_mode_satellite_normal" />
+            <TextView
+                android:id="@+id/tv_satelite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/iv_satelite"
+                android:layout_marginTop="5dp"
+                android:text="卫星图"
+                android:textColor="#353535"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_plain"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/iv_plain"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/main_map_mode_plain_normal" />
+            <TextView
+                android:id="@+id/tv_plain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/iv_plain"
+                android:layout_marginTop="5dp"
+                android:text="2D平面图"
+                android:textColor="#353535"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_3d"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/iv_3d"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/main_map_mode_3d_normal" />
+            <TextView
+                android:id="@+id/tv_3d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/iv_3d"
+                android:layout_marginTop="5dp"
+                android:text="3D俯视图"
+                android:textColor="#353535"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="#f5f5f5"
+        android:padding="2dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="工具"
+            android:textColor="#353535"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_measure_dis"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/btn_list_item_bg"
+        android:clickable="true">
+        <ImageView
+            android:id="@+id/iv_measure_dis"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/measure_len" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/iv_measure_dis"
+            android:layout_centerVertical="true"
+            android:text="测距离"
+            android:textColor="#353535"
+            android:textSize="14sp" />
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:focusable="false"
+            android:scaleType="centerInside"
+            android:src="@drawable/a_r" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#dadada" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_measure_area"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/btn_list_item_bg"
+        android:clickable="true">
+        <ImageView
+            android:id="@+id/iv_measure_area"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/measure_area" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/iv_measure_area"
+            android:layout_centerVertical="true"
+            android:text="测面积"
+            android:textColor="#353535"
+            android:textSize="14sp" />
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:focusable="false"
+            android:scaleType="centerInside"
+            android:src="@drawable/a_r" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#dadada" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="#f5f5f5"
+        android:padding="2dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="消防图层"
+            android:textColor="#353535"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_dz_option"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:id="@+id/iv_dz_option_open"
+                android:layout_width="40dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="2dp"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:src="@drawable/btn_switch_on_normal"
+                android:visibility="visible" />
+            <ImageView
+                android:id="@+id/iv_dz_option_close"
+                android:layout_width="40dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="2dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/btn_switch_off_normal"
+                android:clickable="true"
+                android:visibility="invisible" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/iv_dz_option_open"
+                android:layout_centerVertical="true"
+                android:text="队站"
+                android:textColor="#6699cc"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_sy_option"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/rl_dz_option">
+            <ImageView
+                android:id="@+id/iv_sy_option_open"
+                android:layout_width="40dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="2dp"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:src="@drawable/btn_switch_on_normal"
+                android:visibility="visible" />
+            <ImageView
+                android:id="@+id/iv_sy_option_close"
+                android:layout_width="40dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="2dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/btn_switch_off_normal"
+                android:clickable="true"
+                android:visibility="invisible" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/iv_sy_option_open"
+                android:layout_centerVertical="true"
+                android:text="水源"
+                android:textColor="#6699cc"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list_layer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:background="@android:color/transparent"
+        android:divider="@null" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#dadada" />
+
+</LinearLayout>

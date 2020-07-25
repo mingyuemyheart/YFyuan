@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/splash_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_app"
+    android:orientation="vertical" >
+   
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+	   <ImageView
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" 
+	    android:scaleType="fitXY"
+	    android:src="@drawable/login_app"/>
+	   
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:gravity="center"
+            android:text="技术支持：大连云帆科技有限公司"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+       
+    </RelativeLayout>
+</LinearLayout>

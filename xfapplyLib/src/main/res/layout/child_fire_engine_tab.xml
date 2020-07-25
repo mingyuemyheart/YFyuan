@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_engine_info"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:padding="3dp" >
+            <TextView
+                android:id="@+id/tv_engine_info"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="消防车辆"
+                android:textColor="#575757"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_engine_info"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tv_engine_info"
+                android:layout_marginRight="5dp"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/tab_zddw_base" />
+
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="#dadada" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_mhj_info"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:padding="3dp" >
+            <TextView
+                android:id="@+id/tv_mhj_info"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="车载灭火剂"
+                android:textColor="#575757"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_mhj_info"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tv_mhj_info"
+                android:layout_marginRight="5dp"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/tab_zddw_fire" />
+
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="#dadada" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_equipment_info"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:padding="3dp" >
+            <TextView
+                android:id="@+id/tv_equipment_info"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="消防器材"
+                android:textColor="#575757"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_equipment_info"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tv_equipment_info"
+                android:layout_marginRight="5dp"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/tab_zddw_fire_qc" />
+
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="#dadada" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#dadada" />
+</LinearLayout>

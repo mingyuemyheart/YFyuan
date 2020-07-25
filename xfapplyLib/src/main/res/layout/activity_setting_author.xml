@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEBEB"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/common_top_bar_blue" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/top_bar_back" />
+
+        <View
+            android:id="@+id/view_temp"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/iv_back"
+            android:background="#474747" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/view_temp"
+            android:text="授权配置"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+        
+	    <RelativeLayout
+	        android:id="@+id/rl_refresh"
+	        android:layout_width="@dimen/height_top_bar"
+        	android:layout_height="@dimen/height_top_bar"
+	        android:layout_alignParentRight="true"
+        	android:background="@drawable/btn_title_select_item"
+	        android:clickable="true"
+			android:onClick="onClick">
+	        <TextView
+	            android:layout_width="24dp"
+	            android:layout_height="24dp"
+				android:layout_centerInParent="true"
+	            android:background="@drawable/refresh"
+	            android:gravity="center"/>
+	    </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            
+            <RelativeLayout
+                android:id="@+id/rl_rjsqzt"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_list_item_bg"
+                android:clickable="true"
+                android:padding="10dp" >
+                <TextView
+		            android:id="@+id/tv_temp_rjsqzt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10dp"
+                    android:text="软件授权状态"
+                    android:textColor="#353535"
+                    android:textSize="16sp" />
+		        <TextView
+		            android:id="@+id/tv_rjsqzt"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="20dp"
+		            android:ellipsize="end"
+		            android:gravity="right"
+					android:singleLine="true"
+		            android:text="已授权"
+		            android:textColor="#AAAAAA"
+		            android:textSize="14sp" />
+            </RelativeLayout>
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="#dadada" />
+            
+            <RelativeLayout
+                android:id="@+id/rl_dqsj"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_list_item_bg"
+                android:clickable="true"
+                android:padding="10dp" >
+                <TextView
+		            android:id="@+id/tv_temp_dqsj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10dp"
+                    android:text="到期时间"
+                    android:textColor="#353535"
+                    android:textSize="16sp" />
+		        <TextView
+		            android:id="@+id/tv_dqsj"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="20dp"
+		            android:ellipsize="end"
+		            android:gravity="right"
+					android:singleLine="true"
+		            android:text="2015-08-09"
+		            android:textColor="#AAAAAA"
+		            android:textSize="14sp" />
+            </RelativeLayout>
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="#dadada" />
+            
+            <RelativeLayout
+                android:id="@+id/rl_device"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_list_item_bg"
+                android:clickable="true"
+                android:padding="10dp" >
+                <TextView
+		            android:id="@+id/tv_temp_device"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10dp"
+                    android:text="设备编号"
+                    android:textColor="#353535"
+                    android:textSize="16sp" />
+		        <TextView
+		            android:id="@+id/tv_device"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="20dp"
+		            android:layout_toRightOf="@id/tv_temp_device"
+		            android:ellipsize="end"
+		            android:gravity="right"
+					android:singleLine="true"
+		            android:text=""
+		            android:textColor="#AAAAAA"
+		            android:textSize="14sp" />
+            </RelativeLayout>
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="#dadada" />
+            
+            <RelativeLayout
+                android:id="@+id/rl_sdcard"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_list_item_bg"
+                android:clickable="true"
+                android:padding="10dp" >
+                <TextView
+		            android:id="@+id/tv_temp_sdcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10dp"
+                    android:text="SD卡序列号"
+                    android:textColor="#353535"
+                    android:textSize="16sp" />
+		        <TextView
+		            android:id="@+id/tv_sdcard"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="20dp"
+		            android:layout_toRightOf="@id/tv_temp_sdcard"
+		            android:ellipsize="end"
+		            android:gravity="right"
+					android:singleLine="true"
+		            android:text=""
+		            android:textColor="#AAAAAA"
+		            android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

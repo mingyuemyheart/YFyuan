@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <LinearLayout
+        android:id="@+id/re_xfc"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/btn_option_item_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_xfcl" />
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="消防车"
+            android:textColor="#353535"
+            android:textSize="8sp" />
+    </LinearLayout>
+    <View
+        android:layout_width="0.1dp"
+        android:layout_height="match_parent"
+        android:background="#dadada"/>
+    <LinearLayout
+        android:id="@+id/re_xfqc"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/btn_option_item_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_qc" />
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="消防器材"
+            android:textColor="#353535"
+            android:textSize="8sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0.1dp"
+        android:layout_height="match_parent"
+        android:background="#dadada"/>
+
+    <LinearLayout
+        android:id="@+id/re_mhj"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/btn_option_item_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_mhj" />
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="灭火剂"
+            android:textColor="#353535"
+            android:textSize="8sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0.1dp"
+        android:layout_height="match_parent"
+        android:background="#dadada"/>
+
+    <View
+        android:layout_width="0.1dp"
+        android:layout_height="match_parent"
+        android:background="#dadada"/>
+
+</LinearLayout>

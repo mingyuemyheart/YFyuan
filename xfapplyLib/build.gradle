@@ -1,0 +1,93 @@
+//apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+
+//封装aar包步骤如下：
+//1、apply plugin: 'com.android.application'修改为apply plugin: 'com.android.library'，注释掉applicationId
+//2、去掉启动界面属性
+//3、注释掉打包信息
+//4、minifyEnabled true 代码混淆开启
+//5、注释掉高德地图信息
+//6、根目录增加classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5' //用于打包Maven所需文件
+//maven { url 'https://www.jitpack.io' }
+//9、注释掉manifest里icon、lable、theme信息
+//7、执行./gradlew install
+//8、提交代码至github，并更新发布gitpack
+//9、MainActivity中isLibrary改为true
+//10、修改colors里的颜色值
+//11、abiFilters 'armeabi-v7a', 'armeabi', 'x86', 'x86_64', 'arm64-v8a'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+//        applicationId "com.moft.xfapply"
+        minSdkVersion 17
+        targetSdkVersion 27
+        versionCode 22
+        versionName "2.2"
+//        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    maven {
+        url "https://repo.eclipse.org/content/repositories/paho-releases/"
+    }
+}
+
+//发布GitHub项目到JitPack
+apply plugin: 'com.github.dcendents.android-maven' // ADD THIS
+group='com.github.mingyuemyheart'
+
+// build a jar with source files
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    failOnError  false
+    source = android.sourceSets.main.java.sourceFiles
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    classpath += configurations.compile
+}
+
+// build a jar with javadoc
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
+//发布GitHub项目到JitPack
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.4.2'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.anthonycr.grant:permissions:1.1.2'
+    implementation 'commons-net:commons-net:3.6'
+    implementation 'com.rabbitmq:amqp-client:4.7.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.google.zxing:core:3.3.3'
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation files('libs/afinal_0.5_bin.jar')
+    implementation files('libs/BaiduLBS_Android.jar')
+    implementation files('libs/component_common_sdk_1.0.0.jar')
+    implementation files('libs/httpclient-4.2.2.jar')
+    implementation files('libs/httpcore-4.2.2.jar')
+    implementation files('libs/IndoorscapeAlbumPlugin.jar')
+    implementation files('libs/SangforSDK.jar')
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/re_option1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/btn_option_item_bg"
+        android:clickable="true"
+        android:padding="2dp">
+        <ImageView
+            android:id="@+id/iv_option1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+			android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/measure_len" />
+        <TextView
+            android:id="@+id/tv_option1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+			android:layout_alignParentBottom="true"
+            android:text="测距"
+            android:textColor="#353535"
+            android:textSize="12sp" />
+    </RelativeLayout>
+        
+    <RelativeLayout
+        android:id="@+id/re_option2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/btn_option_item_bg"
+        android:clickable="true"
+        android:padding="2dp">
+        <ImageView
+            android:id="@+id/iv_option2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+			android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/measure_area" />
+        <TextView
+            android:id="@+id/tv_option2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+			android:layout_alignParentBottom="true"
+            android:text="测面积"
+            android:textColor="#353535"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</LinearLayout>

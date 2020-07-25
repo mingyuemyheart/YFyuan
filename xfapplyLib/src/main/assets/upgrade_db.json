@@ -1,0 +1,22 @@
+[{
+  "mode": "common",
+  "baseLine": 19,
+  "upgradeCommand": [{
+    "verNo": 20,
+    "commands": []
+  }]
+},{
+  "mode": "offline",
+  "baseLine": 19,
+  "upgradeCommand": [{
+    "verNo": 20,
+    "commands": []
+  }]
+},{
+  "mode": "history",
+  "baseLine": 19,
+  "upgradeCommand": [{
+    "verNo": 20,
+    "commands": []
+  }]
+}]

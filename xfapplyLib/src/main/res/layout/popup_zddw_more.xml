@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#d7d7d7" />
+    
+	<RelativeLayout
+	    android:id="@+id/rl_yt"
+	    android:layout_width="match_parent"
+	    android:layout_height="48dp"
+	    android:background="@drawable/btn_list_item_bg"
+	    android:clickable="true" >
+	
+	    <TextView
+	        android:id="@+id/tv_yt_name"
+	        android:layout_width="70dp"
+	        android:layout_height="48dp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="12dp"
+	        android:gravity="center_vertical"
+	        android:text="用途"
+	        android:textColor="#353535"
+	        android:textSize="16sp" />
+
+	    <EditText
+	        android:id="@+id/tv_yt"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:minHeight="48dp"
+	        android:layout_toRightOf="@id/tv_yt_name"
+	        android:layout_marginLeft="12dp"
+	        android:layout_marginRight="12dp"
+	        android:gravity="center_vertical|right"
+	        android:background="@drawable/edittext_hc"
+	        android:hint=""
+	        android:textColor="#AAAAAA"
+	        android:textSize="16sp" />
+	
+	    <View
+	        android:layout_width="match_parent"
+	        android:layout_height="0.1dp"
+	        android:layout_alignParentBottom="true"
+	        android:background="#dadada" />
+	</RelativeLayout>
+    
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="48dp"
+	    android:background="@drawable/btn_list_item_bg"
+	    android:clickable="true" >
+	
+	    <TextView
+	        android:id="@+id/tv_cg_name"
+	        android:layout_width="70dp"
+	        android:layout_height="48dp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="12dp"
+	        android:gravity="center_vertical"
+	        android:text="层高"
+	        android:textColor="#353535"
+	        android:textSize="16sp" />
+
+	    <EditText
+	        android:id="@+id/tv_cg"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:minHeight="48dp"
+	        android:layout_toRightOf="@id/tv_cg_name"
+	        android:layout_marginLeft="12dp"
+	        android:layout_marginRight="12dp"
+	        android:gravity="center_vertical|right"
+	        android:background="@drawable/edittext_hc"
+	        android:hint="层数"
+	        android:inputType="number"
+	        android:textColor="#AAAAAA"
+	        android:textSize="16sp" />
+	
+	    <View
+	        android:layout_width="match_parent"
+	        android:layout_height="0.1dp"
+	        android:layout_alignParentBottom="true"
+	        android:background="#dadada" />
+	</RelativeLayout>
+    
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="48dp"
+	    android:background="@drawable/btn_list_item_bg"
+	    android:clickable="true" >
+	
+	    <TextView
+	        android:id="@+id/tv_gd_name"
+	        android:layout_width="70dp"
+	        android:layout_height="48dp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="12dp"
+	        android:gravity="center_vertical"
+	        android:text="高度"
+	        android:textColor="#353535"
+	        android:textSize="16sp" />
+
+	    <EditText
+	        android:id="@+id/tv_gdMax"
+	        android:layout_width="80dp"
+	        android:layout_height="wrap_content"
+	        android:minHeight="48dp"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="12dp"
+	        android:gravity="center"
+	        android:background="@drawable/edittext_hc"
+	        android:hint="米"
+	        android:inputType="number"
+	        android:textColor="#AAAAAA"
+	        android:textSize="16sp" />
+	
+	    <TextView
+	        android:id="@+id/tv_gd_divider"
+	        android:layout_width="30dp"
+	        android:layout_height="48dp"
+	        android:layout_marginLeft="12dp"
+	        android:layout_marginRight="12dp"
+	        android:layout_toLeftOf="@id/tv_gdMax"
+	        android:gravity="center"
+	        android:text="-"
+	        android:textColor="#353535"
+	        android:textSize="16sp" />
+
+	    <EditText
+	        android:id="@+id/tv_gdMin"
+	        android:layout_width="80dp"
+	        android:layout_height="wrap_content"
+	        android:minHeight="48dp"
+	        android:layout_toLeftOf="@id/tv_gd_divider"
+	        android:layout_marginLeft="12dp"
+	        android:gravity="center"
+	        android:background="@drawable/edittext_hc"
+	        android:hint="米"
+	        android:inputType="number"
+	        android:textColor="#AAAAAA"
+	        android:textSize="16sp" />
+	
+	    <View
+	        android:layout_width="match_parent"
+	        android:layout_height="0.1dp"
+	        android:layout_alignParentBottom="true"
+	        android:background="#dadada" />
+	</RelativeLayout>
+	
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="48dp" >
+	
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="48dp" >
+		    <TextView
+		    	android:id="@+id/tv_clear"
+		        android:layout_width="0dp"
+		        android:layout_height="48dp"
+		        android:layout_weight="1"
+		        android:layout_alignParentLeft="true"
+		        android:layout_centerVertical="true"
+		        android:gravity="center"
+		        android:text="清空"
+		        android:textColor="#353535"
+		        android:textSize="16sp"
+			    android:background="@drawable/btn_list_item_bg"
+			    android:clickable="true"  />
+		
+		    <TextView
+		    	android:id="@+id/tv_confirm"
+		        android:layout_width="0dp"
+		        android:layout_height="48dp"
+		        android:layout_weight="1"
+		        android:layout_alignParentRight="true"
+		        android:layout_centerVertical="true"
+		        android:gravity="center"
+		        android:text="确认"
+		        android:textColor="#C13E16"
+		        android:textSize="18sp" 
+			    android:background="@drawable/btn_list_item_bg"
+			    android:clickable="true" />
+		</LinearLayout>
+	
+	    <View
+	        android:layout_width="match_parent"
+	        android:layout_height="0.1dp"
+	        android:layout_alignParentBottom="true"
+	        android:background="#dadada" />
+	</RelativeLayout>
+
+</LinearLayout>

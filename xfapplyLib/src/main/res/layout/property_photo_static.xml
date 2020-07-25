@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="80dp">
+
+    <com.moft.xfapply.widget.NoScrollGridView
+        android:id="@+id/gv_photos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#FFFFFF"
+        android:horizontalSpacing="3dp"
+        android:columnWidth="100dp"
+        android:numColumns="auto_fit"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:stretchMode="spacingWidth"
+        android:verticalSpacing="5dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#dadada" />
+</LinearLayout>

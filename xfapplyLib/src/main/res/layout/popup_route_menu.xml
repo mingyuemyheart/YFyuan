@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp" >
+    <LinearLayout
+        android:id="@+id/re_route3"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/btn_option_item_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/iv_route3"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_menu_route_sel" />
+        <TextView
+            android:id="@+id/tv_route3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="前三到场"
+            android:textColor="#353535"
+            android:textSize="8sp" />
+    </LinearLayout>
+    <View
+        android:layout_width="0.1dp"
+        android:layout_height="match_parent"
+        android:background="#dadada"/>
+    <LinearLayout
+        android:id="@+id/re_route5"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/btn_option_item_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/iv_route5"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_menu_route_unsel" />
+        <TextView
+            android:id="@+id/tv_route5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="前五到场"
+            android:textColor="#353535"
+            android:textSize="8sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0.1dp"
+        android:layout_height="match_parent"
+        android:background="#dadada"/>
+
+    <LinearLayout
+        android:id="@+id/re_poi"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/btn_option_item_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/iv_poi"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_menu_poi_unsel" />
+        <TextView
+            android:id="@+id/tv_poi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="地图POI"
+            android:textColor="#353535"
+            android:textSize="8sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0.1dp"
+        android:layout_height="match_parent"
+        android:background="#dadada"/>
+
+    <LinearLayout
+        android:id="@+id/re_change_list"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/btn_option_item_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/iv_change_list"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_menu_list_unsel" />
+        <TextView
+            android:id="@+id/tv_change_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="切至列表"
+            android:textColor="#353535"
+            android:textSize="8sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0.1dp"
+        android:layout_height="match_parent"
+        android:background="#dadada"/>
+
+</LinearLayout>

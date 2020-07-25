@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2013 The CCP project authors. All Rights Reserved.
+ 
+     Use of this source code is governed by a Beijing Speedtong Information Technology Co.,Ltd license
+     that can be found in the LICENSE file in the root of the web site.
+ 
+     http://www.yuntongxun.com
+ 
+     An additional intellectual property rights grant can be found
+     in the file PATENTS.  All contributing project authors may
+     be found in the AUTHORS file in the root of the source tree.
+ -->
+<resources>
+
+    <!--
+    <string-array name="Codec_call">
+        <item>Codec_iLBC</item>
+        <item>Codec_G729</item>
+        <item>Codec_PCMU</item>
+        <item>Codec_PCMA</item>
+        <item>Codec_H264</item>
+        <item>Codec_SILK8K</item>
+        <item>Codec_AMR</item>
+        <item>Codec_VP8</item>
+        <item>Codec_SILK16K</item>
+        <item>Codec_OPUS48</item>
+        <item>Codec_OPUS16</item>
+        <item>Codec_OPUS8</item>
+    </string-array>
+    -->
+
+</resources>

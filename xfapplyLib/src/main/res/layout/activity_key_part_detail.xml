@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb">
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:layout_alignParentTop="true"
+        android:background="@color/common_top_bar_blue" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/top_bar_back" />
+
+        <View
+            android:id="@+id/view_temp"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/iv_back"
+            android:background="#474747" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/view_temp"
+            android:text="名称"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+	</RelativeLayout>
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@+id/title">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+			<com.moft.xfapply.widget.ObservableScrollView
+				android:id="@+id/sv_content"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginTop="5dp"
+				android:layout_marginBottom="5dp"
+				android:fadingEdge="none" >
+
+				<com.moft.xfapply.widget.TouchLinearLayout
+					android:id="@+id/ll_content"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="#ebebeb"
+					android:orientation="vertical" >
+				</com.moft.xfapply.widget.TouchLinearLayout>
+			</com.moft.xfapply.widget.ObservableScrollView>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="40dp"
+				android:paddingLeft="10dp"
+				android:text="所在平面图"
+				android:textColor="@color/property_title"
+				android:textSize="@dimen/property_title_size"
+				android:background="@drawable/property_list_item_bg"
+				android:gravity="center_vertical"
+				android:id="@+id/tv_pmt"/>
+
+			<com.moft.xfapply.widget.HighLightImageView
+				android:layout_width="match_parent"
+				android:layout_height="280dp"
+				android:background="#474747"
+				android:id="@+id/iv_pmt"
+				android:clickable="true"
+				android:onClick="onPmtClick"/>
+		</LinearLayout>
+	</ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+	<RelativeLayout
+		android:id="@+id/rl_result"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/btn_list_item_bg">
+
+		<RelativeLayout
+			android:id="@+id/re_select"
+			android:layout_width="wrap_content"
+			android:layout_height="48dp"
+			android:layout_alignParentLeft="true"
+			android:clickable="true"
+			android:background="@drawable/btn_list_item_bg" >
+			<TextView
+				android:id="@+id/tv_select"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_marginLeft="10dp"
+				android:maxWidth="200dp"
+				android:gravity="center_vertical"
+				android:ellipsize="start"
+				android:maxLines="2"
+				android:text="查询条件"
+				android:textColor="#ff9800"
+				android:textSize="15sp"  />
+		</RelativeLayout>
+		<TextView
+			android:id="@+id/tv_result"
+			android:layout_width="wrap_content"
+			android:layout_height="48dp"
+			android:layout_toRightOf="@id/re_select"
+			android:gravity="center_vertical"
+			android:layout_marginLeft="5dp"
+			android:maxLines="1"
+			android:text="结果"
+			android:textColor="#0074C7"
+			android:textSize="16sp"/>
+
+		<RelativeLayout
+			android:id="@+id/re_select_con"
+			android:layout_width="wrap_content"
+			android:layout_height="48dp"
+			android:layout_alignParentRight="true"
+			android:clickable="true"
+			android:background="@drawable/btn_list_item_bg" >
+			<TextView
+				android:id="@+id/tv_select_con"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:text="更多条件"
+				android:textColor="#ff9800"
+				android:textSize="14sp" />
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:id="@+id/re_eletype_con"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:minHeight="40dp"
+			android:layout_below="@+id/re_select"
+			android:background="@drawable/btn_list_item_bg" >
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="0.1dp"
+				android:layout_alignParentTop="true"
+				android:background="#dadada"/>
+			<TextView
+				android:id="@+id/tv_eletype_des"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="8dp"
+				android:text="筛选条件:"
+				android:layout_centerVertical="true"
+				android:textColor="#353535"
+				android:textSize="13sp"/>
+			<TextView
+				android:id="@+id/tv_eletype_con"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				android:layout_toRightOf="@+id/tv_eletype_des"
+				android:layout_toLeftOf="@+id/re_clear"
+				android:layout_marginRight="3dp"
+				android:layout_centerVertical="true"
+				android:text="条件描述"
+				android:textColor="#6699cc"
+				android:textSize="13sp"/>
+			<RelativeLayout
+				android:id="@+id/re_clear"
+				android:layout_width="50dp"
+				android:layout_height="30dp"
+				android:layout_marginTop="5dp"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:clickable="true"
+				android:background="@drawable/btn_list_item_bg" >
+				<ImageView
+					android:id="@+id/iv_operation"
+					android:layout_width="16dp"
+					android:layout_height="16dp"
+					android:layout_centerInParent="true"
+					android:src="@drawable/clear_select1"
+					android:gravity="center"/>
+
+			</RelativeLayout>
+		</RelativeLayout>
+	</RelativeLayout>
+
+    <View
+	    android:layout_width="match_parent"
+	    android:layout_height="0.1dp"
+	    android:background="#dadada"/>
+
+	<LinearLayout
+		android:id="@+id/ll_tongji"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		android:background="#ffffff"
+		android:gravity="center_vertical"
+		android:orientation="horizontal"
+		android:visibility="visible" >
+
+		<RelativeLayout
+			android:id="@+id/re_zongliang"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:background="@drawable/btn_list_item_bg"
+			android:padding="3dp" >
+			<TextView
+				android:id="@+id/tv_zongliang"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:text="总量:123456"
+				android:ellipsize="start"
+				android:singleLine="true"
+				android:maxWidth="100dp"
+				android:textColor="#FF9800"
+				android:textSize="14sp" />
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:id="@+id/re_keyong"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:background="@drawable/btn_list_item_bg"
+			android:padding="3dp" >
+			<TextView
+				android:id="@+id/tv_keyong"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:text="可用:123456"
+				android:textColor="#759D38"
+				android:textSize="14sp" />
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:id="@+id/re_sunhuai"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:background="@drawable/btn_list_item_bg"
+			android:padding="3dp">
+			<TextView
+				android:id="@+id/tv_sunhuai"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:text="损坏:123456"
+				android:ellipsize="start"
+				android:singleLine="true"
+				android:maxWidth="100dp"
+				android:textColor="#759D38"
+				android:textSize="14sp" />
+		</RelativeLayout>
+		<RelativeLayout
+			android:id="@+id/re_chezai"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:background="@drawable/btn_list_item_bg"
+			android:padding="3dp">
+			<TextView
+				android:id="@+id/tv_chezai"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:text="车载:123456"
+				android:ellipsize="start"
+				android:singleLine="true"
+				android:maxWidth="100dp"
+				android:textColor="#759D38"
+				android:textSize="14sp" />
+		</RelativeLayout>
+	</LinearLayout>
+
+    <View
+	    android:layout_width="match_parent"
+	    android:layout_height="0.1dp"
+	    android:background="#dadada"/>
+
+	<com.moft.xfapply.widget.XListView
+		android:cacheColorHint="#00000000"
+		android:id="@+id/list"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@android:color/transparent"
+		android:divider="@null"
+	/>
+
+</LinearLayout>

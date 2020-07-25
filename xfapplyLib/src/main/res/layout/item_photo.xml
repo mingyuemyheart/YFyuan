@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btn_list_item_bg"
+    android:clickable="true">
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<ImageView
+			android:id="@+id/image"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:minWidth="100dp"
+			android:minHeight="100dp"
+			android:layout_centerInParent="true"
+			android:src="@drawable/ic_stub"/>
+		<TextView
+			android:id="@+id/text"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:gravity="center"
+			android:layout_marginBottom="5dp"
+			android:maxWidth="120dp"
+			android:singleLine="true"
+			android:ellipsize="start"
+			android:textStyle="bold"
+			android:text=""
+			android:textColor="#e16531"
+			android:textSize="10sp" />
+	</RelativeLayout>
+	
+	<ImageView
+		android:id="@+id/iv_select"
+		android:layout_width="16dp"
+		android:layout_height="16dp"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="5dp"
+		android:src="@drawable/dx_checkbox_gray_on"
+		android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="240dp">
+
+                <ImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/auth_ng"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_action1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/tv_action1_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="正在验证本终端授权状态..."
+                    android:textColor="#353535"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_action1_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="终端未授权！"
+                    android:textColor="@color/red_btn_color_normal"
+                    android:textSize="18sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/ll_action1_tin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal" >
+                    <TextView
+                        android:id="@+id/tv_action1_tin1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="请联系管理员，上报终端号后等待授权。"
+                        android:textColor="@color/btn_register_normal"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/tv_action1_tin2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="终端号："
+                        android:textColor="#AAAAAA"
+                        android:textSize="16sp"
+                        android:background="@drawable/btn_list_item_bg"
+                        android:clickable="true" />
+                    <TextView
+                        android:id="@+id/tv_action1_tin3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="10dp"
+                        android:text="刷新终端授权状态"
+                        android:textColor="#0074C7"
+                        android:textSize="14sp"
+                        android:background="@drawable/btn_list_item_bg"
+                        android:clickable="true" />
+                    <TextView
+                        android:id="@+id/tv_setting_server"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:text="服务器设置"
+                        android:textColor="#858585"
+                        android:textSize="14sp"
+                        android:background="@drawable/btn_list_item_bg"
+                        android:clickable="true"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_action2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/tv_action2_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="正在检查最新版本..."
+                    android:textColor="#353535"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_action2_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="当前版本："
+                    android:textColor="#AAAAAA"
+                    android:textSize="16sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/ll_action2_tin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal" >
+                    <TextView
+                        android:id="@+id/tv_action2_tin2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="20dp"
+                        android:text="点击立即更新"
+                        android:textColor="#0066FF"
+                        android:textSize="16sp"
+                        android:background="@drawable/btn_list_item_bg"
+                        android:clickable="true" />
+                    <TextView
+                        android:id="@+id/tv_action2_tin3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:text="以后再说"
+                        android:textColor="@color/btn_register_normal"
+                        android:textSize="14sp"
+                        android:background="@drawable/btn_list_item_bg"
+                        android:clickable="true"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <com.moft.xfapply.widget.CompletedView
+                            android:id="@+id/tasks_view"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_centerInParent="true"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_action3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/tv_action3_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="正在检查离线库版本..."
+                    android:textColor="#353535"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_action3_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="离线库版本正常"
+                    android:textColor="#AAAAAA"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

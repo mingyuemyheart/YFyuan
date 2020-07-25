@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <LinearLayout
+        android:id="@+id/ll_item"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:text="应急对象"
+                android:textColor="#353535"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:id="@+id/tv_name"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center|right"
+                android:paddingRight="10dp"
+                android:text="容量"
+                android:textColor="#007dff"
+                android:textSize="16sp"
+                android:id="@+id/tv_attr"/>
+            <TextView
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:text="辽宁省大连市"
+                android:textColor="#AAAAAA"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:id="@+id/tv_description"
+                android:layout_below="@+id/tv_name"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

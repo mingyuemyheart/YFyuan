@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+	<LinearLayout
+		android:id="@+id/title"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="vertical">
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/height_top_bar"
+			android:layout_alignParentTop="true"
+			android:background="@color/common_top_bar_blue" >
+
+			<ImageView
+				android:id="@+id/iv_title"
+				android:layout_width="120dp"
+				android:layout_height="23dp"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"
+				android:layout_marginLeft="6dp"
+				android:background="@drawable/title"/>
+
+			<RelativeLayout
+				android:id="@+id/re_select"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_centerInParent="true">
+				<TextView
+					android:id="@+id/tv_select"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:text=""
+					android:textColor="#BCBCBC"
+					android:textSize="16sp"
+					android:textStyle="bold"/>
+			</RelativeLayout>
+
+			<RelativeLayout
+                android:id="@+id/rl_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+                <RelativeLayout
+                    android:id="@+id/rl_sub_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/iv_sub_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_centerVertical="true"
+                        android:text="应用版"
+                        android:textSize="15sp"
+                        android:textColor="#99ffffff"
+                        android:gravity="center"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_operation"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_title_select_item"
+                    android:clickable="true" >
+                    <ImageView
+                        android:id="@+id/iv_operation"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/refresh"
+                        android:scaleType="centerInside"
+                        android:gravity="center"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+			<RelativeLayout
+                android:id="@+id/rl_process"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+				android:background="@drawable/btn_title_select_item"
+                android:clickable="false"
+                android:onClick="onUpdatePanelClick"
+				android:layout_alignParentTop="true"
+				android:layout_toLeftOf="@+id/rl_right"
+				android:layout_toStartOf="@+id/rl_right">
+                <ProgressBar
+                    android:id="@+id/loading_process"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerInParent="true"
+                    style="@style/ProgressBar"
+                    android:visibility="gone"/>
+                <ImageView
+                    android:id="@+id/loading_error"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/loading_error"
+					android:visibility="gone"/>
+            </RelativeLayout>
+		</RelativeLayout>
+	</LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/re_verify"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onTabClicked"
+            android:padding="3dp" >
+
+            <ImageView
+                android:id="@+id/ib_verify"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:background="#ffffff"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/tab_verify" />
+
+            <TextView
+                android:id="@+id/tv_verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ib_verify"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:text=""
+                android:textColor="#9A9A9A"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/re_data"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onTabClicked"
+            android:padding="3dp" >
+
+            <ImageView
+                android:id="@+id/ib_data"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:background="#ffffff"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/tab_data" />
+
+            <TextView
+                android:id="@+id/tv_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ib_data"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:text=""
+                android:textColor="#9A9A9A"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+	    <View
+	        android:id="@+id/view_plus"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+            android:layout_weight="1"
+	        android:background="#ffffff"/>
+
+        <RelativeLayout
+            android:id="@+id/re_zqsl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onTabClicked"
+            android:padding="3dp" >
+
+            <ImageView
+                android:id="@+id/ib_message"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:background="#ffffff"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/tab_message" />
+
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ib_message"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:text=""
+                android:textColor="#9A9A9A"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/re_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onTabClicked"
+            android:padding="3dp" >
+
+            <ImageView
+                android:id="@+id/ib_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:background="#ffffff"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/tab_profile" />
+
+            <TextView
+                android:id="@+id/tv_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ib_profile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:text=""
+                android:textColor="#9A9A9A"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_temp"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_above="@id/main_bottom"
+        android:background="#d6d6d6" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/view_temp"
+        android:layout_below="@id/title" />
+    
+    <RelativeLayout
+        android:id="@+id/re_plus"
+        android:layout_width="64dp"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/ib_plus"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/btn_search_more_select_item"
+            android:clickable="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

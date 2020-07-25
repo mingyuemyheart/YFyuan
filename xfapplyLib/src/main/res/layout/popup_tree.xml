@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEBEB"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/et_filter"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:drawableLeft="@drawable/tree_search"
+            android:drawablePadding="10dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="#353535"
+            android:textSize="14sp"
+            android:hint="请输入关键字"
+            android:background="@drawable/seabar_input"
+            android:maxLines="1"
+            android:visibility="visible"/>
+
+        <ListView
+            android:id="@+id/listView"
+            android:cacheColorHint="#00000000"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:divider="@null"/>
+
+    </LinearLayout>
+
+</LinearLayout>

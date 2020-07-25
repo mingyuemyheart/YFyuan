@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"  >
+
+    <RelativeLayout
+        android:id="@+id/re_parent"
+        android:layout_width="match_parent"
+    	android:layout_height="40dp"
+    	android:background="@drawable/btn_option_item_bg"
+    	android:clickable="true">
+	    <ImageView
+	        android:id="@+id/iv_check"
+	        android:layout_width="16dp"
+	        android:layout_height="16dp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="6dp"
+	        android:src="@drawable/item_checkout_icon" />
+	
+	    <ImageView
+	        android:id="@+id/iv_tuli"
+	        android:layout_width="24dp"
+	        android:layout_height="24dp"
+	        android:layout_toRightOf="@id/iv_check"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="2dp"
+	        android:layout_marginRight="2dp"
+	        android:src="@drawable/marker_sy" />
+	
+	    <TextView
+	        android:id="@+id/tv_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_toRightOf="@id/iv_tuli"
+	        android:text=""
+	        android:textColor="#353535"
+	        android:textSize="14sp"  />
+	</RelativeLayout>
+</RelativeLayout>
