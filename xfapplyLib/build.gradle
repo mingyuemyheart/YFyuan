@@ -22,8 +22,8 @@ android {
 //        applicationId "com.moft.xfapply"
         minSdkVersion 17
         targetSdkVersion 27
-        versionCode 26
-        versionName "2.6"
+        versionCode 27
+        versionName "2.7"
 //        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -76,22 +76,22 @@ artifacts {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'org.greenrobot:eventbus:3.0.0'
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.github.bumptech.glide:glide:3.7.0'
-    implementation 'com.squareup.okhttp3:okhttp:3.4.2'
-    implementation 'com.google.code.gson:gson:2.8.0'
-    implementation 'com.anthonycr.grant:permissions:1.1.2'
-    implementation 'commons-net:commons-net:3.6'
-    implementation 'com.rabbitmq:amqp-client:4.7.0'
-    implementation 'com.github.bumptech.glide:glide:3.7.0'
-    implementation 'com.google.zxing:core:3.3.3'
-    implementation 'com.android.support:multidex:1.0.1'
-    implementation files('libs/afinal_0.5_bin.jar')
-    implementation files('libs/BaiduLBS_Android.jar')
-    implementation files('libs/component_common_sdk_1.0.0.jar')
-    implementation files('libs/httpclient-4.2.2.jar')
-    implementation files('libs/httpcore-4.2.2.jar')
-    implementation files('libs/IndoorscapeAlbumPlugin.jar')
-    implementation files('libs/SangforSDK.jar')
+    api 'org.greenrobot:eventbus:3.0.0'
+    api 'com.android.support:appcompat-v7:28.0.0'
+    api 'com.github.bumptech.glide:glide:3.7.0'
+    api 'com.squareup.okhttp3:okhttp:3.4.2'
+    api 'com.google.code.gson:gson:2.8.0'
+    api 'com.anthonycr.grant:permissions:1.1.2'
+    api 'commons-net:commons-net:3.6'
+    api 'com.rabbitmq:amqp-client:4.7.0'
+    api 'com.github.bumptech.glide:glide:3.7.0'
+    api 'com.google.zxing:core:3.3.3'
+    api 'com.android.support:multidex:1.0.1'
+    api files('libs/afinal_0.5_bin.jar')
+    api files('libs/BaiduLBS_Android.jar')
+    api files('libs/component_common_sdk_1.0.0.jar')
+    api files('libs/httpclient-4.2.2.jar')
+    api files('libs/httpcore-4.2.2.jar')
+    api files('libs/IndoorscapeAlbumPlugin.jar')
+    api files('libs/SangforSDK.jar')
 }
